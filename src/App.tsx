@@ -31,7 +31,8 @@ const characters: Character[] = [
   { id: 20, name: "Kylin Zhang", image: "/src/assets/characters/kylin-zhang.jpg" },
   { id: 21, name: "Syra", image: "/src/assets/characters/syra.jpg" },
   { id: 22, name: "Lannie", image: "/src/assets/characters/lannie.jpg" },
-  { id: 23, name: "Inor Van", image: "/src/assets/characters/inor-van.jpg" }
+  { id: 23, name: "Inor Van", image: "/src/assets/characters/inor-van.jpg" },
+  { id: 24, name: "Xunhuan Li", image: "/src/assets/characters/xunhuan-li.jpg" }
 ]
 
 function App() {
@@ -60,7 +61,6 @@ function App() {
         return
       }
     } else {
-      // exclude mode - get all heroes NOT in selectedHeroes
       availableHeroes = characters.map(char => char.id)
         .filter(id => !selectedHeroes.has(id))
       if (availableHeroes.length === 0) {
@@ -76,7 +76,6 @@ function App() {
       return
     }
     
-    // Shuffle and select required number of heroes
     const shuffled = [...availableHeroes].sort(() => Math.random() - 0.5)
     const selectedTeam = shuffled.slice(0, teamSize)
     setRandomHeroes(selectedTeam)
@@ -184,9 +183,6 @@ function App() {
                 <img 
                   src={character.image}
                   alt={character.name}
-                  onError={(e) => {
-                    e.currentTarget.src = `https://via.placeholder.com/80x80/4CAF50/white?text=${character.name.charAt(0)}`;
-                  }}
                 />
               </div>
               <span className="hero-name">{character.name}</span>
