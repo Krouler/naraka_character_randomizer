@@ -33,7 +33,9 @@ const characters: Character[] = [
   { id: 22, name: "Lannie", image: "/src/assets/characters/lannie.jpg" },
   { id: 23, name: "Inor Van", image: "/src/assets/characters/inor-van.jpg" },
   { id: 24, name: "Xunhuan Li", image: "/src/assets/characters/xunhuan-li.jpg" },
-  { id: 25, name: "Zenda Wu", image: "/src/assets/characters/zenda-wu.jpg" }
+  { id: 25, name: "Zenda Wu", image: "/src/assets/characters/zenda-wu.jpg" },
+  { id: 26, name: "Tara Gan", image: "/src/assets/characters/tara-gan.jpg" },
+  { id: 27, name: "Ye Xiu", image: "/src/assets/characters/ye-xiu.jpg" }
 ]
 
 function App() {
